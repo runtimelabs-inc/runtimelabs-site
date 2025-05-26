@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Inter from Google Fonts */
+/* Import Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* Apply Inter to body text via Tailwind's `font-sans` utility */
+/* Base styles */
 body {
-  @apply font-sans antialiased text-gray-900 bg-white;
+  @apply font-sans antialiased bg-black text-gray-100 leading-relaxed tracking-tight;
+}
+
+a {
+  @apply text-runtime-accent hover:underline transition duration-150;
 }
