@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* Import JetBrains Mono font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 /* Base styles */
 body {

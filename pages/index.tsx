@@ -5,7 +5,6 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import CTAButton from '../components/CTAButton'
 
-
 export default function Home() {
   return (
     <>
@@ -21,73 +20,73 @@ export default function Home() {
       <div className="bg-black text-gray-100 min-h-screen font-sans">
         <NavBar />
 
-        <main className="px-6 py-24 max-w-5xl mx-auto">
-          <section className="text-center">
-            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-snug mb-4">
-              Runtime Labs
-            </h1>
+        <main className="px-6 py-20 max-w-4xl mx-auto space-y-4">
+          {/* Header Block */}
+          <section>
+            <h1 className="text-4xl font-bold mb-3">Runtime Labs</h1>
             <p className="text-lg text-gray-400 italic">
-              Programmable memory + interface for managing agents
-              <br />
-              Interface for Managing and Scheduling Agents
+              Programmable Memory + Temporal Agent Runtime
             </p>
             <p className="text-sm text-gray-600 mt-2">
               Confidential – Internal Preview – Do Not Distribute
             </p>
           </section>
 
-          <section className="mt-16 space-y-10 text-left">
-            <div>
-              <h2 className="text-2xl font-semibold text-runtime-accent mb-2">Vision</h2>
-              <p className="text-gray-300 leading-relaxed">
-                Runtime Labs is building the temporal runtime layer for agent systems — where plans, memory, and behavior are grounded in time.
-                We are transforming calendars from static interfaces into programmable execution environments, enabling agents to plan, reflect,
-                receive feedback, replan, and take actions across time.
-              </p>
-              <p className="mt-4 text-gray-400">
-                <strong className="text-runtime-accent">Temporal runtime layer</strong> — infrastructure that allows agents to reason over temporal context,
-                receive feedback, and dynamically adapt behavior across time.
-              </p>
-              <p className="mt-4 text-gray-400">
-                Our system prioritizes <em>user control and autonomy</em>, giving users the ability to adjust timing, edit agent-generated plans,
-                and shape behavior through an accessible and auditable interface.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-semibold text-runtime-accent mb-2">Problem</h2>
-              <p className="text-gray-300 leading-relaxed">
-                Today's language models (and agents) are typically stateless and are not yet grounded in time. They lack:
-              </p>
-              <ul className="list-disc list-inside mt-2 text-gray-400 space-y-1">
-                <li>Persistent memory across tasks</li>
-                <li>Scheduling and execution guarantees</li>
-                <li>Feedback loops and coordination</li>
-                <li>Traceable user modeling over time</li>
-                <li>Novel UI for controlling and logging agent timing and behavior</li>
-              </ul>
-              <p className="mt-4 text-gray-400">
-                Most current solutions <strong>confine agents to chat windows</strong>, treating planning as reactive — disconnected from evolving user context and commitments.
-              </p>
-              <p className="mt-2 text-gray-400">
-                Chronologue flips this by starting from <strong>runtime-first principles</strong>, inspired by CUDA’s host-device architecture:
-              </p>
-              <ul className="list-disc list-inside mt-2 text-gray-400 space-y-1">
-                <li><strong>User/Planner as Host</strong> — sets intent, approves plans, governs execution</li>
-                <li><strong>Agent as Device</strong> — executes time-bound tasks, logs memory, and adapts</li>
-              </ul>
-            </div>
-
-            <div className="text-sm text-gray-500 pt-4">
-              Based in San Francisco — Full-time on Runtime Labs
-            </div>
+          {/* Vision Section */}
+          <section className="space-y-4 border-t border-gray-800 pt-4">
+            <h2 className="text-2xl font-semibold text-runtime-accent">Vision</h2>
+            <p className="text-gray-300">
+              Runtime Labs is building the runtime layer to ground agents in time and user context.
+              We are also developing interfaces for transforming calendars into programmable and editable environments for scheduling agent planning, memory coordination, and time-based reasoning.
+            </p>
+            <p className="text-gray-400">
+              Agents today operate without persistent memory, real-time execution, or feedback-driven coordination.
+              Runtime Labs introduces a runtime-first architecture, enabling structured scheduling, reflection, and autonomous behavior grounded in user timelines.
+            </p>
+            <p className="text-gray-400">
+              We treat time as a first-class interface for managing memory, agency, and behavior — unlocking a new class of intelligent systems.
+            </p>
           </section>
 
-          <div className="mt-16 flex flex-wrap justify-center gap-4">
-            <CTAButton label="Explore Docs" href="https://docs.runtimelabs.ai" external />
-            <CTAButton label="View GitHub" href="https://github.com/runtimelabs-inc" external variant="outline" />
-            <CTAButton label="Contact" href="mailto:derek@runtimelabs.ai" external variant="outline" />
-          </div>
+          {/* Why Time Section */}
+          <section id="time" className="space-y-4 border-t border-gray-800 pt-4">
+            <h2 className="text-2xl font-semibold text-runtime-accent">Time</h2>
+            <p className="text-gray-300">
+              Achieving artificial general intelligence requires more than scaling models. It demands grounded intelligence in space and time, where agents are embedded in the physical context of users, organizations, and environments.
+            </p>
+            <p className="text-gray-400">
+              A core axis of this grounding is time. Just as general relativity reveals that all physical systems are constrained by spacetime,
+              intelligent systems must reason and act within the temporal structure of real-world commitments, causality, and feedback.
+            </p>
+            <p className="text-gray-400">
+              Time is often abstracted away or omitted entirely during pretraining on natural language — despite its essential role in aligning intelligence with user intent at inference. This may represent a foundational gap in current training regimes.
+            </p>
+            <p className="text-gray-400">
+              Runtime Labs treats time not as metadata, but as a core execution substrate — enabling agents to plan, reflect, and adapt their behavior in alignment with the evolving rhythms of our lives.
+            </p>
+          </section>
+
+          {/* Tempo Tokens Section */}
+          <section id="tempo-tokens" className="space-y-4 border-t border-gray-800 pt-4">
+            <h2 className="text-2xl font-semibold text-runtime-accent">Tempo Tokens</h2>
+            <p className="text-gray-300">
+              At Runtime, we explore augmenting pretraining data with Tempo Tokens: compact representations of events tagged with timestamps.
+              These tokens give models structured access to temporal context and enable natural language to be anchored to events as they unfold in the physical world.
+            </p>
+          </section>
+
+          {/* CTA Section */}
+          <section className="space-y-6 border-t border-gray-800 pt-10">
+            <p className="text-sm text-gray-500">
+              Based in San Francisco — Full-time on Runtime Labs
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <CTAButton label="Explore Docs" href="https://docs.runtimelabs.ai" external />
+              <CTAButton label="View GitHub" href="https://github.com/runtimelabs-inc" external variant="outline" />
+              <CTAButton label="Contact" href="mailto:derek@runtimelabs.ai" external variant="outline" />
+            </div>
+          </section>
         </main>
 
         <Footer />

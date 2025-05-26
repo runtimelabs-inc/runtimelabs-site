@@ -49,23 +49,69 @@ Value: 76.76.21.21
 
 Save and wait 5–15 minutes for propagation. HTTPS is handled automatically.
 
-## File Structure
 
 
+## Tailwind CSS Setup
+
+Tailwind is configured using JIT mode and dark mode support via class strategy. Make sure the following setup is in place:
+
+### 1. Global Styles
+
+Ensure `styles/global.css` includes:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  @apply font-sans bg-black text-gray-100 leading-relaxed tracking-tight;
+}
 ```
-runtime-labs-site/  
-├── pages/               # Next.js routes  
-│   └── index.tsx        # Landing page  
-├── public/              # Static assets (favicon, images)  
-│   └── favicon.ico  
-├── styles/  
-│   └── globals.css      # Tailwind + font styling  
-├── tailwind.config.js   # Tailwind setup  
-├── next.config.js       # Next.js config  
-├── tsconfig.json        # TypeScript config  
-├── package.json         # Dependencies and scripts  
-└── README.md            # This file
+
+### 2. Tailwind Configuration
+
+```js
+module.exports = {
+  darkMode: 'class',
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
+  ],
+  theme: {
+    extend: {
+      colors: {
+        runtime: {
+          primary: '#3B82F6',
+          accent: '#4ADE80',
+          dark: '#111827',
+          gray: '#4B5563'
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui']
+      }
+    }
+  },
+  plugins: []
+}
 ```
+
+### 3. `_app.tsx` Imports 
+
+```tsx
+import '../styles/global.css'
+```
+
+
+### 4. Restart Dev Server 
+
+```
+npm run dev
+```
+
 
 ## Contact
 
