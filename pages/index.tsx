@@ -32,9 +32,10 @@ export default function Home() {
             </p>
           </section>
 
+
           {/* Vision Section */}
           <section className="space-y-4 border-t border-gray-800 pt-4">
-            <h2 className="text-2xl font-semibold text-runtime-accent">Vision</h2>
+            <h2 className="text-2xl font-semibold text-runtime-accent"></h2>
             <p className="text-gray-300">
               Runtime Labs is building the runtime layer to ground agents in time and user context.
               We are also developing interfaces for transforming calendars into programmable and editable environments for scheduling agent planning, memory coordination, and time-based reasoning.
@@ -48,15 +49,52 @@ export default function Home() {
             </p>
           </section>
 
-          {/* Why Time Section */}
+                 {/* Stack Overview – Cards */}
+                 <section className="space-y-4 border-t border-gray-800 pt-6">
+            <h2 className="text-2xl font-semibold text-runtime-accent">Product Suite</h2>
+            <div className="grid sm:grid-cols-2 gap-6 mt-6">
+              {[
+                {
+                  name: 'Chronologue',
+                  status: 'Core memory-runtime calendar system',
+                  role: 'Temporal compiler + coordination layer',
+                  positioning: 'The interface between users and agents'
+                },
+                {
+                  name: 'MemPort',
+                  status: 'Portable long-term memory vault',
+                  role: 'Interface for memory logging and recall',
+                  positioning: 'Modular, but tightly coupled with Chronologue'
+                },
+                {
+                  name: 'Agent Runtime',
+                  status: 'Structured execution environment',
+                  role: 'Planning, profiling, and feedback orchestration',
+                  positioning: 'Core agent API layer'
+                },
+                {
+                  name: 'Tempo Tokens',
+                  status: 'Time-based tokenization layer',
+                  role: 'Timestamping, duration modeling, conditioning',
+                  positioning: 'Grammar of Chronologue'
+                }
+              ].map(product => (
+                <div key={product.name} className="border border-gray-800 bg-gray-900 rounded-lg p-5 hover:border-runtime-accent transition">
+                  <h3 className="text-lg font-semibold text-white">{product.name}</h3>
+                  <p className="text-sm text-gray-400 italic">Status: {product.status}</p>
+                  <p className="text-sm text-gray-300 mt-2"><strong>Role:</strong> {product.role}</p>
+                  <p className="text-sm text-gray-400"><strong>Positioning:</strong> {product.positioning}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+
+          {/* Time Section */}
           <section id="time" className="space-y-4 border-t border-gray-800 pt-4">
-            <h2 className="text-2xl font-semibold text-runtime-accent">Time</h2>
+            <h2 className="text-2xl font-semibold text-runtime-accent"></h2>
             <p className="text-gray-300">
               Achieving artificial general intelligence requires more than scaling models. It demands grounded intelligence in space and time, where agents are embedded in the physical context of users, organizations, and environments.
-            </p>
-            <p className="text-gray-400">
-              A core axis of this grounding is time. Just as general relativity reveals that all physical systems are constrained by spacetime,
-              intelligent systems must reason and act within the temporal structure of real-world commitments, causality, and feedback.
             </p>
             <p className="text-gray-400">
               Time is often abstracted away or omitted entirely during pretraining on natural language — despite its essential role in aligning intelligence with user intent at inference. This may represent a foundational gap in current training regimes.
